@@ -123,6 +123,7 @@ ath79_setup_interfaces()
 	iodata,wn-ac1600dgr|\
 	iodata,wn-ac1600dgr2|\
 	iodata,wn-ag300dgr|\
+	csac,III|\
 	pcs,cr5000)
 		ucidef_add_switch "switch0" \
 			"0@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "5:wan"
@@ -354,6 +355,11 @@ ath79_setup_macs()
 		;;
 	wd,mynet-wifi-rangeextender)
 		lan_mac=$(nvram get et0macaddr)
+		;;
+	xwrt,csac)
+		wan_mac=$(mtd_get_mac_binary art 0)
+		lan_mac=$(macaddr_add "$wan_mac" 1)
+		label_mac=$wan_mac
 		;;
 	esac
 
