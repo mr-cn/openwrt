@@ -348,6 +348,7 @@ platform_check_image() {
 	arduino-yun|\
 	bhr-4grv2|\
 	bxu2000n-2-a1|\
+	csac|\
 	db120|\
 	dr344|\
 	dw33d|\

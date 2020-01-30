@@ -170,6 +170,9 @@ get_status_led() {
 	cr5000)
 		status_led="pcs:amber:power"
 		;;
+	csac)
+		status_led="csac:green:status"
+		;;
 	dap-1330-a1|\
 	dgl-5500-a1|\
 	dhp-1565-a1|\

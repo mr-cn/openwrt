@@ -132,6 +132,12 @@ define LegacyDevice/CAP4200AG
 endef
 LEGACY_DEVICES += CAP4200AG
 
+define LegacyDevice/CSAC
+  DEVICE_TITLE := CSAC III
+  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca9888-ct kmod-usb-core kmod-usb2 kmod-usb-storage
+endef
+LEGACY_DEVICES += CSAC
+
 define LegacyDevice/DB120
   DEVICE_TITLE := Atheros DB120 reference board
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-storage

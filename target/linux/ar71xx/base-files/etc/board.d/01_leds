@@ -270,6 +270,11 @@ cr5000)
 	ucidef_set_led_wlan "wlan" "WLAN" "pcs:blue:wlan" "phy0tpt"
 	ucidef_set_led_usbdev "usb" "USB" "pcs:white:wps" "1-1"
 	;;
+csac)
+	ucidef_set_led_switch "status" "STATUS" "csac:green:status" "switch0" "0x10"
+	ucidef_set_led_wlan "wlan2g" "WLAN2G" "csac:green:wlan2g" "phy1tpt"
+	ucidef_set_led_wlan "wlan5g" "WLAN5G" "csac:green:wlan5g" "phy0tpt"
+	;;
 db120)
 	ucidef_set_led_usbdev "usb" "USB" "$board:green:usb" "1-1"
 	;;
